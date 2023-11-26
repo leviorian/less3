@@ -1,0 +1,201 @@
+import java.util.Scanner;
+
+class  MainQ1 {
+public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("Enter a number: ");
+    int number = scanner.nextInt();
+
+     if (number > 0) {
+     System.out.println("Positive");
+     } else if (number < 0) {
+     System.out.println("Negative");
+      } else {
+      System.out.println("The number is zero");
+      }
+     scanner.close();
+}
+}
+
+
+import java.util.Scanner;
+
+class MainQ2 {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter number1: ");
+        int firstNumber = scanner.nextInt();
+
+        System.out.print("Enter number2: ");
+        int secondNumber = scanner.nextInt();
+
+        if (firstNumber < secondNumber) {
+            System.out.println("The smallest number is: " + firstNumber);
+        } else {
+            System.out.println("The smallest number is: " + secondNumber);
+        }
+
+        scanner.close();
+    }
+}
+
+
+import java.util.Scanner;
+
+public class BikeRace {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("הזן את האות של רוכב הראשון: ");
+        char rider1 = scanner.next().charAt(0);
+        System.out.print("הזן את המרחק של רוכב הראשון (בקילומטרים): ");
+        double distance1 = scanner.nextDouble();
+        System.out.print("הזן את המהירות של רוכב הראשון (בקמ/שעה): ");
+        double speed1 = scanner.nextDouble();
+
+        System.out.print("הזן את האות של רוכב השני: ");
+        char rider2 = scanner.next().charAt(0);
+        System.out.print("הזן את המרחק של רוכב השני (בקילומטרים): ");
+        double distance2 = scanner.nextDouble();
+        System.out.print("הזן את המהירות של רוכב השני (בקמ/שעה): ");
+        double speed2 = scanner.nextDouble();
+
+        double time1 = distance1 / speed1;
+        double time2 = distance2 / speed2;
+
+        if (time1 < time2) {
+            System.out.println("רוכב " + rider1 + " יגיע ראשון!");
+        } else if (time1 > time2) {
+            System.out.println("רוכב " + rider2 + " יגיע ראשון!");
+        } else {
+            System.out.println("שני הרוכבים יגיעו באותו זמן!");
+        }
+
+        scanner.close();
+    }
+}
+
+
+import java.util.Scanner;
+public class Grades {
+  public static void main(String[] args){
+    Scanner scanner = new Scanner(System.in);
+    System.out.print("enter your greade:");
+    int FirstGrade = scanner.nextInt();
+    System.out.print("enter your grade:");
+    int SecoundGrade = scanner.nextInt();
+    System.out.print("enter your grade:");
+    int ThirdGrade = scanner.nextInt();
+    int avg = (FirstGrade + SecoundGrade + ThirdGrade) / 3;
+    System.out.print("your avg is:" + avg);
+    scanner.close();
+  }
+}
+
+
+import java.util.Scanner;
+
+public class E.java {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Please enter the first term 
+ of the arithmetic sequence:");
+        int a1 = scanner.nextInt();
+        System.out.println("Please enter the common 
+ difference of the arithmetic sequence:");
+        int d = scanner.nextInt();
+
+        int a5 = a1 + (5 - 1) * d;
+
+        int a10 = a1 + (10 - 1) * d;
+
+        System.out.println("The fifth term in the arithmetic sequence is: " + a5);
+        System.out.println("The tenth term in the arithmetic sequence is: " + a10);
+    }
+}
+
+
+
+import java.util.Scanner;
+
+ public class F {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        final int SINGLE_PRICE = 120;
+        final int BOX_SIZE = 54;
+        final int BOX_PRICE = 5000;
+        final int MAX_BOXES = 2;
+        final int MAX_SINGLE = 108;
+
+        System.out.println("Enter the number of ice 
+ creams purchased:");
+        int numberOfIceCreams = scanner.nextInt();
+        int minPayment = 0;
+
+        int individualIceCreams = numberOfIceCreams % 
+ BOX_SIZE;
+        minPayment += (individualIceCreams * 
+ SINGLE_PRICE);
+
+        int iceCreamBoxes = numberOfIceCreams / BOX_SIZE;
+        int boxPurchaseLimit = Math.min(iceCreamBoxes, 
+ MAX_BOXES);
+        minPayment += (boxPurchaseLimit * BOX_PRICE);
+
+        System.out.println("The minimum required payment 
+ is: " + minPayment + " agorot");
+    }
+//}
+
+
+import java.util.Scanner;
+
+public class G {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter your full name:");
+        String name = scanner.nextLine();
+
+        System.out.println("Enter your school name:");
+        String school = scanner.nextLine();
+
+        System.out.println("Enter the number of subjects you study:");
+        int numberOfSubjects = scanner.nextInt();
+        scanner.nextLine(); 
+
+        System.out.println("My name is: " + name);
+        System.out.println("My school is: " + school);
+        System.out.println("The number of subjects I study: " + numberOfSubjects);
+
+        scanner.close();
+    }
+}
+
+
+
+import java.util.Scanner;
+
+public class SumOfDigits {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter a three-digit number:");
+        int number = scanner.nextInt();
+
+        int digit1 = number % 10;
+        int digit2 = (number / 10) % 10;
+        int digit3 = number / 100;
+
+        int sumOfDigits = digit1 + digit2 + digit3;
+
+        boolean isEven = (sumOfDigits % 2 == 0);
+
+        System.out.println("Sum of digits: " + sumOfDigits);
+        System.out.println("Is the sum even? " + isEven);
+
+        scanner.close();
+    }
+}
