@@ -16,7 +16,7 @@ class Main {
 class A{
   public static void main (String[] args) {
     int _1=1;
-    float _2=2.53;
+    double _2=2.53;
     System.out.println(_1 +"   " +_2);
   }
 }
@@ -30,7 +30,7 @@ class B{
     char _i='i';
     char _a='a';
     char _n='n';
-    System.out.println(_o+_r+_i+_a+_n);
+    System.out.println(""+_o+_r+_i+_a+_n);
   }
 }
 
@@ -39,11 +39,11 @@ class C{
   public static void main (String[] args) {
     int _1=1;
     int _2=2;
-    System.out.println(_1+"is less then"+_2);
+    System.out.println(_1+"is less than"+_2);
   }
 }
 
-//כתוב תוכנית המגדירה 3 משתנים מסוג מספרים שלמים, התוכנית תדפיס את סכום 3 המספרים.
+// כתוב תוכנית המגדירה 3 משתנים מטיפוס שלמים ומדפיסה את הממוצע שלהם..
 class D{
   public static void main (String[] args) {
     int _x=90;
