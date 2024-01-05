@@ -1,103 +1,207 @@
-import java.util.Scanner;
-
-class  MainQ1 {
-public static void main(String[] args) {
-    Scanner scanner = new Scanner(System.in);
-    System.out.print("Enter a number: ");
-    int number = scanner.nextInt();
-
-     if (number > 0) {
-     System.out.println("Positive");
-     } else if (number < 0) {
-     System.out.println("Negative");
-      } else {
-      System.out.println("The number is zero");
-      }
-     scanner.close();
-}
+//שיעור 2 תרגילים
+//תוכנית המגדירה 3 משתנים מסוג מספר שלם ומדפיסה אותם למסך בשורות נפרדות
+class Main {
+  public static void main(String[] args) {
+    int _x=4;
+    int _y=5;
+    int _z=6;
+    System.out.println(_x);
+    System.out.println(_y);
+    System.out.println(_z);
+  }
 }
 
+//כתוב תוכנית המגדירה משתנה מטיפוס מספר שלם ומשתנה מטיפוס פלואוט. התוכנית תדפיס אותם עם רווח של 3תווים
 
-import java.util.Scanner;
-
-class MainQ2 {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("Enter number1: ");
-        int firstNumber = scanner.nextInt();
-
-        System.out.print("Enter number2: ");
-        int secondNumber = scanner.nextInt();
-
-        if (firstNumber < secondNumber) {
-            System.out.println("The smallest number is: " + firstNumber);
-        } else {
-            System.out.println("The smallest number is: " + secondNumber);
-        }
-
-        scanner.close();
-    }
+class A{
+  public static void main (String[] args) {
+    int _1=1;
+    float _2=2.53;
+    System.out.println(_1 +"   " +_2);
+  }
 }
 
+//כתוב תוכנית המגדירה מספר משתנים מסוג char כמספר האותיות בשמך. התוכנה תדפיס אותם בצורה כזו שהשם שלך מודפס על המסך
 
-import java.util.Scanner;
-
-public class BikeRace {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        System.out.print("הזן את האות של רוכב הראשון: ");
-        char rider1 = scanner.next().charAt(0);
-        System.out.print("הזן את המרחק של רוכב הראשון (בקילומטרים): ");
-        double distance1 = scanner.nextDouble();
-        System.out.print("הזן את המהירות של רוכב הראשון (בקמ/שעה): ");
-        double speed1 = scanner.nextDouble();
-
-        System.out.print("הזן את האות של רוכב השני: ");
-        char rider2 = scanner.next().charAt(0);
-        System.out.print("הזן את המרחק של רוכב השני (בקילומטרים): ");
-        double distance2 = scanner.nextDouble();
-        System.out.print("הזן את המהירות של רוכב השני (בקמ/שעה): ");
-        double speed2 = scanner.nextDouble();
-
-        double time1 = distance1 / speed1;
-        double time2 = distance2 / speed2;
-
-        if (time1 < time2) {
-            System.out.println("רוכב " + rider1 + " יגיע ראשון!");
-        } else if (time1 > time2) {
-            System.out.println("רוכב " + rider2 + " יגיע ראשון!");
-        } else {
-            System.out.println("שני הרוכבים יגיעו באותו זמן!");
-        }
-
-        scanner.close();
-    }
+class B{
+  public static void main (String[] args) {
+    char _o='o';
+    char _r='r';
+    char _i='i';
+    char _a='a';
+    char _n='n';
+    System.out.println(_o+_r+_i+_a+_n);
+  }
 }
 
+//כתוב תוכנית המגדירה 2 משתנים מסוג מספר שלם (הראשון קטן מהשני), התוכנה תדפיס שמספר אחד קטן מהמספר השני.
+class C{
+  public static void main (String[] args) {
+    int _1=1;
+    int _2=2;
+    System.out.println(_1+"is less then"+_2);
+  }
+}
 
-import java.util.Scanner;
-public class Grades {
-  public static void main(String[] args){
-    Scanner scanner = new Scanner(System.in);
-    System.out.print("enter your greade:");
-    int FirstGrade = scanner.nextInt();
-    System.out.print("enter your grade:");
-    int SecoundGrade = scanner.nextInt();
-    System.out.print("enter your grade:");
-    int ThirdGrade = scanner.nextInt();
-    int avg = (FirstGrade + SecoundGrade + ThirdGrade) / 3;
-    System.out.print("your avg is:" + avg);
-    scanner.close();
+//כתוב תוכנית המגדירה 3 משתנים מסוג מספרים שלמים, התוכנית תדפיס את סכום 3 המספרים.
+class D{
+  public static void main (String[] args) {
+    int _x=90;
+    int _y=95;
+    int _z=100;
+    System.out.println((_x+_y+_z)/3);
+  }
+}
+
+//כתוב תוכנית המגדירה את אורך הצלעות a ו-b של משולש ישר זווית (מטיפוס מספר שלם), התוכנה תדפיס את אורך הצלע c) בריבוע
+class E{
+  public static void main (String[] args) {
+    int _a=5;
+    int _b=6;
+    int _c=(_a*_a)+(_b*_b);
+    System.out.println(_c);
+  }
+}
+
+//קיימת המשוואה הבאה: y=2x+5 כתוב תוכנית המגדירה את x כרצונך (סוג מספר שלם) ומדפיס את ה-y לפי הפונקציה.
+class F{
+  public static void main (String[] args) {
+    int _x=2;
+    int _y=(_x*2)+5;
+    System.out.println(_y);
+  }
+}
+
+//הגדר את 3 המחרוזות הבאות: ובנוסף משתנה שנקרא שעות מסוג שלם (כל). הדפס את ארבעת המשתנים עם פקודת הדפסה אחת כך שנקבל משפט משולב שלם. "אני אוהב ללמוד מדעי המחשב" "ולכן מוכן להשקיע" "שעות ביום לתרגול"
+
+class G{
+  public static void main (String[] args) {
+    String _1="I like to study computer science";
+    String _2="and therefore ready to invest";
+    String _3="hours a day for practice";
+    int _hours=4;
+    System.out.println(_1+_2+_3+_hours);
   }
 }
 
 
+//שיעור 3 תרגילים
+//כתוב תוכנית שמקבלת מספר שלם ומדפיסה אם הוא חיובי או שלילי
 import java.util.Scanner;
+class H{
+  public static void main (String[] args) {
+    Scanner scan= new Scanner(System.in);
+    int _x;
+    System.out.println("enter a number");
+    _x=scan.nextInt();
+    if (_x>0)
+      System.out.println("positive");
+    else
+      System.out.println("negative");
+    scanner.close();
+  }
+}
 
-public class E.java {
+//כתוב תוכנית שמקבלת 2 מספרים ומדפיסה את הקטן יותר.
+import java.util.Scanner;
+class I{
+  public static void main (String[] args) {
+    Scanner scan= new Scanner(System.in);
+    int _x;
+    int _y;
+    System.out.println("enter a number");
+    _x=scan.nextInt();
+    System.out.println("enter a number");
+    _y=scan.nextInt();
+    if (_x<_y)
+      System.out.println(_x);
+    else
+      System.out.println(_y);
+    scanner.close();
+  }
+}
 
+//מי יגיע ראשון? כתוב תוכנית שמקבלת 2 אותיות של רוכבי אופניים, 2 מרחקים שונים ו-2 מהירויות שונות. התוכנית תדפיס את האות של הרוכב בפחות זמן. תזכורת: x=v*t
+import java.util.Scanner;
+class J{
+  public static void main (String[] args) {
+    Scanner scan = new Scanner(System.in);
+    char _1;
+    System.out.println("whats the first rider letter?");
+    _1=scan.nextChar();
+    char _2;
+    System.out.println("whats the second rider letter?");
+    _2=scan.nextChar();
+    int _distance1;
+    System.out.println("whats the first rider distance?");
+    _distance1=scan.nextInt();
+    int _distance2;
+    System.out.println("whats the second rider distance?");
+    _distance2=scan.nextInt();
+    int _speed1;
+    System.out.println("whats the first rider speed?");
+    _speed1=scan.nextInt();
+    int _speed2;
+    System.out.prinln("whats the second rider speed?");
+    _speed2=scan.nextInt();
+    double _time1=(_distance1/_speed1);
+    double _time2=(_distance2/_speed2);
+    if (_time1<_time2)
+      System.out.println(_1);
+    else
+      System.out.println(_2);
+    scanner.close();
+  }
+}
+
+//כתוב תוכנית שלוקחת שלושה ציונים ומחשבת את הממוצע שלהם.
+import java.util.Scanner;
+class K{
+  public static void main (String[] args) {
+    Scanner scan = new Scanner(System.in);
+    int _1;
+    System.out.println("whats the first score?");
+    _1=scan.nextInt();
+    int _2;
+    System.out.println("whats the second score?");
+    _2=scan.nextInt();
+    int _3;
+    System.out.println("whats the third score?");
+    _3=scan.nextInt();
+    int _average=(_1+_2+_3)/3;
+    System.out.println(_average);
+    scanner.close();
+  }
+}
+
+//כתוב תוכנית שלוקחת שלושה מספרים ומדפיסה את הקטן שבהם.
+import java.util.Scanner;
+class L{
+  public static void main (String[] args) {
+    Scanner scan = new Scanner(System.in);
+    int _1;
+    System.out.println("Enter first number:");
+    _1=scan.nextInt();
+    int _2;
+    System.out.println("Enter second number:");
+    _2=scan.nextInt();
+    int _3;
+    System.out.println("Enter third number:");
+    _3=scan.nextInt();
+    if (_1<_2 && _1<_3);
+      System.out.println(_1);
+    else if (_2<_1 && _2<_3);
+      System.out.println(_2);
+    else
+      System.out.println(_3);
+    scanner.close();
+  }
+}
+
+//כתוב תוכנית הקולטת את האיבר הראשון של סדרה חשבונית ואת הפרש הסדרה.
+//התוכנית מדפיסה את האיבר החמישי והעשירי של הסדרה.
+import java.util.Scanner;
+class M{
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Please enter the first term 
@@ -118,9 +222,12 @@ public class E.java {
 
 
 
+// בחנות גלידות ניתן לקנות קרטיב בודד בשקל ועשרים אגורות.להלן מחירים ביחידות: עשרה קרטיבים - 10 שקלים. 
+//קרטון של 54 קרטיבים - 50 שקלים לא ניתן לקנות מעל 108 קרטיבים בקנייה אחת. כלומר עד 2 קרטונים. 
+//כתוב תוכנית המקבלת את מספר הקרטיבים שנקנו ומדפיסה את המחיר המינימלי הנדרש לתשלום.
 import java.util.Scanner;
 
- public class F {
+class N {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         final int SINGLE_PRICE = 120;
@@ -149,10 +256,12 @@ import java.util.Scanner;
     }
 //}
 
-
+// כתוב תוכנית הקולטת מחרוזת אחת המהווה את שם פרטי + משפחה, 
+//מחרוזת שניה - שם בית הספר. ומשתנה שלישי - מספר מקצועות הלימוד. 
+//התוכנית תדפיס הודעה: My name is ___ , My school is ___ , The number of subjects I study is ____ .
 import java.util.Scanner;
 
-public class G {
+public class O {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
@@ -175,7 +284,7 @@ public class G {
 }
 
 
-
+//כתוב תוכנית הקולטת מספר בין שלוש ספרות, התוכנית תדפיס את סכום הספרות של המספר.
 import java.util.Scanner;
 
 public class SumOfDigits {
