@@ -308,3 +308,257 @@ public class SumOfDigits {
         scanner.close();
     }
 }
+
+
+//שיעור 4
+
+כתוב תוכנית הקולטת שלושה שמות של תלמידי הכיתה ומדפיסה אותם בסדר עולה מבחינת סדר מילוני.
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+
+    System.out.println("Enter the first name: ");
+    String str1 = scan.next();
+
+    System.out.println("Enter the second name: ");
+    String str2 = scan.next();
+
+    System.out.println("Enter the third name: ");
+    String str3 = scan.next();
+
+    if (str1.compareTo(str2) < 0 && str1.compareTo(str3) < 0) {
+      if (str2.compareTo(str3) < 0) {
+        System.out.println(str1 + " " + str2 + " " + str3);
+      } else {
+        System.out.println(str1 + " " + str3 + " " + str2);
+      }
+    } else if (str2.compareTo(str1) < 0 && str2.compareTo(str3) < 0) {
+      if (str1.compareTo(str3) < 0) {
+        System.out.println(str2 + " " + str1 + " " + str3);
+      } else {
+        System.out.println(str2 + " " + str3 + " " + str1);
+      }
+    } else if (str3.compareTo(str1) < 0 && str3.compareTo(str2) < 0) {
+      if (str1.compareTo(str2) < 0) {
+        System.out.println(str3 + " " + str1 + " " + str2);
+      } else {
+        System.out.println(str3 + " " + str2 + " " + str1);
+      }
+    }
+  }
+}
+
+כתוב תוכנית הקולטת משפט מסוג מחרוזת הכוללת 4 מילים. התוכנית תדפיס כמה תווים ישנם במשפט. בין כל מילה יש לתת רווח אחד בלבד
+import java.util.Scanner;
+class Main 
+{
+  public static void main(String[] args)
+  {
+  Scanner scan = new Scanner(System.in);
+   System.out.println("Enter your 4 words Sentence");
+   String str1 = scan.nextLine();
+   int size=str1.length();
+   System.out.println(size);
+}
+}
+
+כתוב תוכנית הקולטת מחרוזת בת 3 תווים, התוכנית תדפיס האם המחרוזת היא פלינדרום. (רצף הנקרא משמאל לימין אותו הדבר כמו מימין לשמאל). False or True.
+import java.util.Scanner;
+class Main
+{
+    public static void main(String[] args)
+    {
+      Scanner scan = new Scanner(System.in);
+      System.out.println("Enter your 3 letters word");
+      String Polindrom = scan.nextLine();
+      char ch1 = Polindrom.charAt(0);
+      char ch3 = Polindrom.charAt(2);
+      if(ch1 == ch3) 
+        System.out.println("Polindrom"); 
+      else 
+        System.out.println("Not Polindrom");
+      
+    }
+}
+
+כתוב תוכנית הקולטת מחרוזת בת 3 תווים, התוכנית תדפיס את המחרוזת בסדר תווים הפוך.
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter your 3 letters word");
+        String word = scan.nextLine();
+        char ch1 = word.charAt(0);
+        char ch2 = word.charAt(1);
+        char ch3 = word.charAt(2);
+        System.out.println(ch3 + "" + ch2 + "" + ch1);
+  }
+}
+
+כתוב תוכנית הקולטת מחרוזת בת 4 תווים. התוכנית תחליף את כל אותיות ה-u,o,i,e,a בכוכבית ומדפיסה את המחרוזת 
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter 4 letters word");
+        String word = scan.nextLine();
+
+        char ch1 = word.charAt(0);
+        char ch2 = word.charAt(1);
+        char ch3 = word.charAt(2);
+        char ch4 = word.charAt(3);
+
+        if (ch1 == 'u' || ch1 == 'o' || ch1 == 'i' || ch1 == 'e' || ch1 == 'a') {
+            ch1 = '*';
+        }
+
+        if (ch2 == 'u' || ch2 == 'o' || ch2 == 'i' || ch2 == 'e' || ch2 == 'a') {
+            ch2 = '*';
+        }
+
+        if (ch3 == 'u' || ch3 == 'o' || ch3 == 'i' || ch3 == 'e' || ch3 == 'a') {
+            ch3 = '*';
+        }
+
+        if (ch4 == 'u' || ch4 == 'o' || ch4 == 'i' || ch4 == 'e' || ch4 == 'a') {
+            ch4 = '*';
+        }
+
+        System.out.println("" + ch1 + ch2 + ch3 + ch4);
+    }
+}
+
+כתוב תוכנית הקולטת מספר עד 100 באופן רנדומלי . התוכנית תדפיס האם המספר חד ספרתי או דו ספרתי ובנוסף האם הוא מתחלק בשתיים או בשלוש
+import java.util.Random;
+
+class Main {
+    public static void main(String[] args) {
+        Random r = new Random();
+        int num1 = r.nextInt(100) + 1;
+        System.out.println("Random number: " + num1);
+        if (num1 < 10) {
+            System.out.println("Single-digit number");
+        } else {
+            System.out.println("Two-digit number");
+        }
+
+        if (num1 % 2 == 0) {
+            System.out.println("Even");
+            if (num1 % 3 == 0) {
+                System.out.println("Divisible by 2 and 3");
+            } else {
+                System.out.println("Divisible by 2 but not by 3");
+            }
+        } else {
+            System.out.println("Odd");
+            if (num1 % 3 == 0) {
+                System.out.println("Divisible by 3 but not by 2");
+            } else {
+                System.out.println("Not divisible by 2 or 3");
+            }
+        }
+    }
+}
+
+
+
+כתוב תוכנית הקולטת 2 נקודות במישור המחשבת את המרחק ביניהם.
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter x of the first point:");
+        int x1 = scan.nextInt();
+        System.out.println("Enter y of the first point:");
+        int y1 = scan.nextInt();
+        System.out.println("Enter x of the second point:");
+        int x2 = scan.nextInt();
+        System.out.println("Enter y of the second point:");
+        int y2 = scan.nextInt();
+
+        int x = (x2 - x1) * (x2 - x1);
+        int y = (y2 - y1) * (y2 - y1);
+
+        System.out.println("The distance between the points is: " + Math.sqrt(x + y));
+    }
+}
+
+
+כתוב תוכנית המקבלת שתי צלעות של משולש ישר זווית ומדפיסה את היתר במשולש.
+import java.util.Scanner;
+
+class Main {
+  public static void main(String[] args) {
+    Scanner scan = new Scanner(System.in);
+    System.out.println("enter the first side of the triangle");
+    int side1 = scan.nextInt();
+    System.out.println("enter the second side of the triangle");
+    int side2 = scan.nextInt();
+    double side3 = (side1 * side1) + (side2 * side2);
+    System.out.println("the third side of the triangle is: " + Math.sqrt(side3));
+  }
+}
+
+
+exemple text q1
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        double distance = 60;
+
+        System.out.println("What's the time in hours that the first car drove?");
+        double v1 = scan.nextDouble();
+        System.out.println("What's the time in hours that the second car drove?");
+        double v2 = scan.nextDouble();
+        System.out.println("Enter the speed of car 1:");
+        int speed1 = scan.nextInt();
+        System.out.println("Enter the speed of car 2:");
+        int speed2 = scan.nextInt();
+        double x1 = speed1 * v1;
+        double x2 = speed2 * v2;
+
+        if (x1 == x2)
+            System.out.println("They are in the same place");
+        else
+            System.out.println("They are not in the same place");
+    }
+}
+
+
+q3
+תוכנית המקבלת שתי מקצועות ושתי ציונים ומדפיסה מי המקצוע עם הציון הגבוהה יותר
+import java.util.Scanner;
+
+
+class Main{
+    public static void main(String[] args){
+      Scanner scan = new Scanner(System.in);
+      
+      System.out.println("Enter the name of the subject");
+      String subject1= scan.nextLine();
+      
+      System.out.println("Enter the name of the secound subject");
+      String subject2= scan.nextLine();
+      
+      System.out.println("enter the first subject grade:");
+      int grade1= scan.nextInt();
+
+      System.out.println("enter the secound subject grade:");
+      int grade2= scan.nextInt();
+      
+      if (grade1>grade2)
+        System.out.println(subject1);
+
+      else
+        System.out.println(subject2);
+  }
+}
+
