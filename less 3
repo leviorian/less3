@@ -525,7 +525,7 @@ public class Main {
         double x1 = speed1 * v1;
         double x2 = speed2 * v2;
 
-        if (x1 == x2)
+        if ((x1 + x2) > distance)
             System.out.println("They are in the same place");
         else
             System.out.println("They are not in the same place");
@@ -562,3 +562,53 @@ class Main{
   }
 }
 
+
+//כתוב תוכנית הקולטת מספר בעל 3 ספרות באופן אקראי, התוכנית תדפיס תשובה בוליאנית האם המספר שהתקבל הינו פלינדרום
+
+import java.util.Random;
+class Main{
+  public static void main(String[] args){
+    int num_x, num1, num3;
+    Random r = new Random();
+    num_x=r.nextInt(900)+100;
+    num3=(num_x%10);
+    num1=(num_x /100);
+    System.out.println(num_x);
+    if(num1 == num3)
+      System.out.println("true");
+    else
+      System.out.println("false");
+  }
+}
+
+
+//כתוב תוכנית הקולטת 2 מחרוזת, הנח שכל מחרוזת גדולה משלוש אותיות. בצע את ההדפסות הבאות: - המחרוזת הארוכה ביותר מבין 2 המחרוזות.
+//- תשובה בוליאנית האם התו הראשון של מחרוזת הראשונה שווה לתו הראשון במחרוזת השניה.
+//- תשובה בוליאנית האם מחרוזת ראשונה הינה תת מחרוזת של המחרוזת השני
+
+import java.util.Scanner;
+class Main{
+  public static void main(String[] args){
+    Scanner scan= new Scanner(System.in);
+    System.out.println("enter the first word");
+    String str1= scan.nextLine();
+    System.out.println("enter the second word");
+    String str2 = scan.nextLine();
+    if(str1.length()>3 && str2.length()>3){
+      if(str1.length()>str2.length())
+        System.out.println(str1);
+      else
+        System.out.println(str2);
+      if(str1.charAt(0)==str2.charAt(0))
+        System.out.println("true");
+      else
+        System.out.println("false");
+      if  (str2.substring(0, str1.length()).equals(str1))
+        System.out.println("true");
+      else
+        System.out.println("false");
+    }else{
+      System.out.println("error");
+    }
+  }
+}
